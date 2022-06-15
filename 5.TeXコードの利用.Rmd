@@ -1,0 +1,45 @@
+---
+title: "5.TeXコードの利用"
+output: html_document
+---
+
+# 1 TeXの簡単なコード
+$y= ax+b$ <br><br>
+$a^2 , a_2, \sqrt{a}$ <br><br>
+$\frac{a}{b}$ <br><br>
+$=, <, >, \leq, \geq$ <br><br>
+$\sum_{n=1}^{10} x_n$ <br><br>
+$\prod_{n=1}^{10} x_n$ <br><br>
+$\cdot, \cdots, \vdots, \ddots$ <br><br>
+$$\begin{eqnarray}
+y&=&(a+b)^2\\
+&=&a^2 + 2ab + b^2
+\end{eqnarray}$$
+<br><br><br>
+
+# 2 ギリシャ文字
+$\alpha, \beta, \gamma, \delta, \cdots$ <br><br>
+$\Lambda, \Phi, \cdots$
+
+<br><br><br>
+
+# 3 arrayで色々な表現
+$\begin{array}{cc} a&b \\ c&d\end{array}$<br><br>
+$\begin{array}{c|c} header1&header2 \\ \hline a&b \\ c&d\end{array}$<br><br>
+$\left( \begin{array}{cc} a&b \\ c&d\end{array} \right)$<br><br>
+$\left\{ \begin{array}{c} 2x+y=1 \\ 4x+y=3\end{array} \right.$<br><br>
+$f(x) = \left\{ \begin{array}{c} x \ \ \ (x\geq0)\\ 0 \ \ \ (x<0)\end{array} \right.$
+
+<br><br><br>
+
+# 4 行列
+$A=\begin{matrix} a & b \\c & d \end{matrix}$ <br><br>
+$A=\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ <br><br>
+$A=\begin{bmatrix} a & b \\c & d \end{bmatrix}$ <br><br>
+$A=\begin{vmatrix} a & b \\c & d \end{vmatrix}$ <br><br>
+$A=\begin{Vmatrix} a & b \\c & d \end{Vmatrix}$ <br><br>
+
+<br><br><br>
+
+
+

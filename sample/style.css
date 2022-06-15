@@ -1,0 +1,70 @@
+:root {
+    --main-bg-color: gray;
+  }
+
+#sidebar{
+    background: black;
+}
+
+#postamble{
+    background: var(--main-bg-color);
+    border-top: solid 10px var(--main-bg-color);
+}
+
+.title{
+    color: var(--main-bg-color);
+    text_align: center;
+}
+
+.subtitle{
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6, legend{
+    color: black;
+}
+
+#sidebar h2{
+    background-color: var(--main-bg-color);
+}
+
+#content{
+    max-width: 100%;
+}
+
+/*ヘッダーの部分*/
+h1 {
+    padding: 0.5em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #dcdcdc;/*背景色*/
+    border-left: solid 10px gray;/*左線（実線 太さ 色）*/
+  }
+
+
+
+/*テーブルの部分*/
+.a1 table{
+    width: 50%;/*横幅*/
+    text-align: center;/*中央揃え*/
+  }
+.a1 th {
+    padding: 10px;/*文字周りの余白*/
+    background: #dcdcdc;/*背景色*/
+    border: solid 1px;/*線の種類 太さ*/
+}
+.a1 td {
+    padding: 10px;/*文字周りの余白*/
+    border: solid 1px;/*線の種類 太さ*/
+    text-align: center;/*中央揃え*/
+}
+
+
+
+/*リストの部分*/
+ol {
+    color: blue;/*文字色*/
+    background: #dcdcdc; /*背景色*/
+    padding: 0.5em 0.5em 0.5em 3em; /*ボックス内の余白*/
+    border: solid 3px gray; /*線の種類 太さ 色*/
+    max-width: 200px;
+  }

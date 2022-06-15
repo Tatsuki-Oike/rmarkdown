@@ -1,0 +1,88 @@
+---
+title: "3.htmlコードの利用"
+output: html_document
+---
+
+<h1>1 見出し</h1>
+
+<h2>見出し2</h2>
+<h3>見出し3</h3>
+<h4>見出し4</h4>
+<h5>見出し5</h5>
+<h6>見出し6</h6>
+
+<br><br><br>
+
+
+
+<h1>2 基本的なhtmlコードの利用</h1>
+
+普通の文章です。<b>太字</b>です。<i>斜体</i>です。<br>
+<u>アンダーライン</u>です。<s>打ち消し線</s>です。<br>
+<font size=5>文字サイズの変更</font>です。<br>
+<font color="blue">青色</font>です。<font color=#0000ff>青色</font>です。<br>
+<span style="background-color:#ffff00">黄色</span>です。<br>
+<!--コメントです。-->
+
+<br><br><br>
+
+
+
+<h1>3 表とリスト</h1>
+
+<h2>3.1 表</h2>
+
+<table>
+    <tr>
+      <th>header1</th>
+      <th>header2</th>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>b</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>d</td>
+    </tr>
+  </table>
+  
+<br>
+  
+<table border="1" width=200 bordercolor="blue" >
+    <tr>
+      <th>header1</th>
+      <th>header2</th>
+    </tr>
+    <tr bgcolor="yellow">
+      <td>a</td>
+      <td>b</td>
+    </tr>
+    <tr align="center">
+      <td>c</td>
+      <td>d</td>
+    </tr>
+  </table>  
+
+<br><br>
+
+<h2>3.2 リスト</h2>
+
+<ol>
+  <li>リスト1</li>
+  <li>リスト2</li>
+  <li>リスト3</li>
+</ol>
+
+<br><br><br>
+
+
+
+<h1>4 画像とリンク</h1>
+
+<a href="https://tatsukioike.com">D研</a><br><br>
+<img src="image.png"></img><br><br>
+<a href="https://tatsukioike.com"><img src="image.png"></img></a>
+
+<br><br><br>
+

@@ -1,0 +1,30 @@
+/*2.ヘッダーの部分*/
+h1 {
+    padding: 0.5em;/*文字周りの余白*/
+    background: #dcdcdc;/*背景色*/
+    border-left: solid 10px gray;/*左線（実線 太さ 色）*/
+  }
+
+/*3.テーブルの部分*/
+table{
+    width: 50%;/*横幅*/
+    text-align: center;/*中央揃え*/
+  }
+th {
+    padding: 10px;/*文字周りの余白*/
+    background: #dcdcdc;/*背景色*/
+    border: solid 1px;/*線の種類 太さ*/
+}
+td {
+    padding: 10px;/*文字周りの余白*/
+    border: solid 1px;/*線の種類 太さ*/
+}
+
+/*4.リストの部分*/
+ol {
+    color: blue;/*文字色*/
+    background: #dcdcdc; /*背景色*/
+    padding: 0.5em 0.5em 0.5em 3em; /*ボックス内の余白*/
+    border: solid 3px gray; /*線の種類 太さ 色*/
+    max-width: 200px;
+  }

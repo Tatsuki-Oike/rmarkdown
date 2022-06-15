@@ -1,0 +1,33 @@
+---
+title: "6.Rコードの利用"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1 Rコードの利用
+
+## 1.1 使用するライブラリ
+```{r}
+library(dplyr)
+library(ggplot2)
+```
+<br><br>
+
+## 1.2 データの確認
+```{r}
+head(iris)
+```
+<br><br>
+
+## 1.3 データの可視化
+```{r}
+iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width)) +
+  geom_point() +
+  theme_classic(base_family = "HiraKakuPro-W3") +
+  theme(text=element_text(size=30)) +
+  labs(title="プロット")
+```

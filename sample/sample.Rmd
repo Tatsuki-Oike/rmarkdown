@@ -1,0 +1,127 @@
+---
+title: "sample"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    css: style.css
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=TRUE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+# 1 htmlやcssの利用
+
+## 1.1 文章
+普通の文章です。<b>太字</b>です。<i>斜体</i>です。<br>
+<u>アンダーライン</u>です。<s>打ち消し線</s>です。<br>
+<font size=5>文字サイズの変更</font>です。<br>
+<font color="blue">青色</font>です。<font color=#0000ff>青色</font>です。<br>
+<span style="background-color:#ffff00">黄色</span>です。<br>
+
+<br><br>
+
+## 1.2 表やリスト
+<table border="1" width=200 bordercolor="blue" class="a1">
+    <tr>
+      <th>header1</th>
+      <th>header2</th>
+    </tr>
+    <tr bgcolor="yellow">
+      <td>a</td>
+      <td>b</td>
+    </tr>
+    <tr align="center">
+      <td>c</td>
+      <td>d</td>
+    </tr>
+  </table>  
+
+<br>
+
+<ol>
+  <li>リスト1</li>
+  <li>リスト2</li>
+  <li>リスト3</li>
+</ol>
+
+<br><br><br>
+
+## 1.3 画像やリンク
+
+<a href="https://tatsukioike.com">D研</a><br><br>
+<img src="image.png"><img><br><br>
+<a href="https://tatsukioike.com"><img src="image.png"><img></a><br><br>
+
+<br><br><br>
+
+# 2 TeXの利用
+
+$y= ax+b$ <br><br>
+$a^2 , a_2, \sqrt{a}$ <br><br>
+$\frac{a}{b}$ <br><br>
+$=, <, >, \leq, \geq$ <br><br>
+$\sum_{n=1}^{10} x_n$ <br><br>
+$\prod_{n=1}^{10} x_n$ <br><br>
+$\cdot, \cdots, \vdots, \ddots$ <br><br>
+$$\begin{eqnarray}
+y&=&(a+b)^2\\
+&=&a^2 + 2ab + b^2
+\end{eqnarray}$$
+<br><br><br>
+
+# 3 Rコードの利用{.tabset}
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(DT)
+library(plotly)
+```
+
+
+## 3.1 データの確認
+```{r}
+datatable(iris,
+          filter='top',  # 各列の検索機能
+          extensions = 'Scroller', # スクロール
+          class="compact", # コンパクトに
+          options = list(
+            scrollY = 400, # スクロール幅
+            searching = TRUE, # 検索機能
+            paging = FALSE, # ページ機能off
+            columnDefs = list(list(className = 'dt-left', targets = "_all")) # 左寄せd
+            )
+          )
+```
+
+<br><br>
+
+## 3.2 データの可視化
+
+```{r}
+p <-iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width)) +
+  geom_point() +
+  theme_classic(base_family = "HiraKakuPro-W3") +
+  theme(text=element_text(size=30)) +
+  labs(title="プロット")
+ggplotly(p)
+```
+
+

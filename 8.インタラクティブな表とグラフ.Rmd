@@ -1,0 +1,84 @@
+---
+title: "8.インタラクティブな表とグラフ"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, # 出力結果表示
+               message=FALSE) # メッセージ非表示
+```
+
+<br><br><br>
+
+# 1 Rコードの利用
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(DT)
+library(plotly)
+```
+
+<br><br>
+
+## 1.1 データの確認
+```{r}
+datatable(iris,
+          filter='top',  # 各列の検索機能
+          extensions = 'Scroller', # スクロール
+          class="compact", # コンパクトに
+          options = list(
+            scrollY = 400, # スクロール幅
+            searching = TRUE, # 検索機能
+            paging = FALSE, # ページ機能off
+            columnDefs = list(list(className = 'dt-left', targets = "_all")) # 左寄せd
+            )
+          )
+```
+
+<br><br>
+
+## 1.2 データの可視化
+
+```{r}
+p <-iris %>%
+  ggplot(aes(Sepal.Length, Sepal.Width)) +
+  geom_point() +
+  theme_classic(base_family = "HiraKakuPro-W3") +
+  theme(text=element_text(size=30)) +
+  labs(title="プロット")
+ggplotly(p)
+```
+
+<br><br><br>
+
+# 2 Rコードの利用{.tabset}
+
+<br><br>
+
+## 2.1 データの確認
+```{r}
+datatable(iris,
+          filter='top',  # 各列の検索機能
+          extensions = 'Scroller', # スクロール
+          class="compact", # コンパクトに
+          options = list(
+            scrollY = 400, # スクロール幅
+            searching = TRUE, # 検索機能
+            paging = FALSE, # ページ機能off
+            columnDefs = list(list(className = 'dt-left', targets = "_all")) # 左寄せd
+            )
+          )
+```
+
+<br><br>
+
+## 2.2 データの可視化
+
+```{r}
+ggplotly(p)
+```
+
+
